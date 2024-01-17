@@ -4,26 +4,19 @@ const nodemailer = require('nodemailer');
 let transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'momadejunior584@gmail.com',
-    pass: 'vbyrwanncufqntdr'
+    user: 'your gmail email here',
+    pass: 'your password app'//your can generate here by Add an app password from here: myaccount.google.com/apppasswords 
+    //example: nodemailer it will generate a password copy and clean the space and past here
   }
 });
 
-let product = [{
-  car: "BMW",
-  color: "red",
-}, {
-  car: "VW",
-  color: "black",
-}];
-
 // Define the email content with a reply-to address
 let mailOptions = {
-  from: 'momadejunior584@gmail.com',
-  to: 'momadejunior584@gmail.com',
-  replyTo: 'momadejunior.dev@gmail.com', // Specify the reply-to address
+  from: 'your gmail email',
+  to: 'your gmail email',
+  replyTo: 'client email', // Specify the reply-to address
   subject: 'Subject of the email',
-  text: `Body of the email\n${product.map(car => `${car.car} - ${car.color}`).join('\n')}`,
+  text: `Body of the email,
 };
 
 // Send the email
